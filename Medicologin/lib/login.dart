@@ -33,7 +33,7 @@ class Login extends StatelessWidget {
               style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold,color: Color.fromARGB(255, 255, 255, 255)),
               textAlign: TextAlign.right,
               ),
-             const Text("to start working",textAlign: TextAlign.center, style: TextStyle(fontSize: 20.0,color: Colors.grey,),),
+             const Text("to start working!",textAlign: TextAlign.center, style: TextStyle(fontSize: 20.0,color: Colors.grey,),),
          const SizedBox(height: 30,),
          const Padding(
            padding: EdgeInsets.symmetric(horizontal: 90),
