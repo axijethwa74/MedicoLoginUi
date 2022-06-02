@@ -19,6 +19,7 @@ class Login extends StatelessWidget {
         useMaterial3: true,
       ),
       home:  Scaffold(
+        backgroundColor:  const Color.fromARGB(255, 31, 23, 48),
         appBar: AppBar(
           centerTitle: true,
           
@@ -28,9 +29,8 @@ class Login extends StatelessWidget {
           child : SingleChildScrollView(
           child: Column(
             children: [
-            //const SizedBox(height: 0,),
              const Text("Sign Up",
-              style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold,color: Color.fromARGB(255, 36, 4, 110)),
+              style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold,color: Color.fromARGB(255, 255, 255, 255)),
               textAlign: TextAlign.right,
               ),
              const Text("to start working",textAlign: TextAlign.center, style: TextStyle(fontSize: 20.0,color: Colors.grey,),),
@@ -39,10 +39,12 @@ class Login extends StatelessWidget {
            padding: EdgeInsets.symmetric(horizontal: 90),
            child: TextField(
                     keyboardType: TextInputType.emailAddress,
-
-                    decoration: InputDecoration(border :OutlineInputBorder(),
-                    hintText: "Username :",
-                    prefixIcon: Icon(Icons.email),
+                    decoration: InputDecoration(border :OutlineInputBorder(
+                    ),
+                    hintText: "Username :", 
+                    hintStyle: TextStyle(fontSize: 15.0, color: Colors.white),
+                    prefixIcon: Icon(Icons.email,color: Colors.black),
+                    
                     ),
 
                   ),
@@ -54,8 +56,9 @@ class Login extends StatelessWidget {
                     keyboardType: TextInputType.emailAddress,
                     obscureText: true,
                     decoration: InputDecoration(border :OutlineInputBorder(),
-                    hintText: "Password:",
-                    prefixIcon: Icon(Icons.lock),
+                    hintText: "Password :",
+                    hintStyle: TextStyle(fontSize: 15.0, color: Colors.white),
+                    prefixIcon: Icon(Icons.lock,color: Colors.black),
                     ),
            ),
            
@@ -64,16 +67,18 @@ class Login extends StatelessWidget {
      Row(
        mainAxisAlignment: MainAxisAlignment.center,
        children:  [
-         ElevatedButton(onPressed: showToast, 
-         // ignore: sort_child_properties_last
-         child: const Text("Sign Up",
-         style: TextStyle( color: Colors.white ,fontSize: 16),
-         ),
-         style: ElevatedButton.styleFrom(
-           minimumSize: const Size(200, 50),
-            primary: const Color.fromARGB(255, 36, 4, 110), 
-         ), 
+         Center(
+           child: ElevatedButton(onPressed: showToast, 
+           // ignore: sort_child_properties_last
+           child: const Text("Sign Up",
+           style: TextStyle( color: Colors.white ,fontSize: 16),
+           ),
+           style: ElevatedButton.styleFrom(
+             minimumSize: const Size(200, 50),
+              primary: const Color.fromARGB(255, 3, 3, 3), 
+           ), 
 ),
+         ),
  
 
 
@@ -102,13 +107,15 @@ class Login extends StatelessWidget {
    
 
   void showToast()=> Fluttertoast.showToast(
-    msg: "Welcome",
+    msg: "Succesfully Done !",
     fontSize: 100,
     textColor: Colors.black,
+     backgroundColor: Colors.red,  
+     
+    
     ); 
   
 
 
 
   }
-
